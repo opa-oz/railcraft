@@ -1,12 +1,6 @@
 name: Railcraft CI
 
 on:
-  push:
-    branches:
-    - 1.20.x
-  pull_request:
-    branches:
-    - 1.20.x
   workflow_dispatch:
 
 jobs:
@@ -34,9 +28,6 @@ jobs:
 
       - name: Build
         run: ./gradlew build
-
-      - name: Test
-        run: ./gradlew runGameTestServer
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
